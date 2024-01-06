@@ -4,6 +4,8 @@ version: 2
 # Image to use
 build:
   os: ubuntu-22.04  # <- add this line
+  tools:
+    python: "3.9"
   image: testing
 
 # Configuration
