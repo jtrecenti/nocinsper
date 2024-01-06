@@ -8,6 +8,9 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
+requests = "^2.31.0"
+bs4 = "^0.0.1"
+pandas = "^2.1.4"
 
 [tool.poetry.dev-dependencies]
 
