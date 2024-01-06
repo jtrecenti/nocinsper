@@ -41,7 +41,30 @@ def noc_get_month(username, password, mes, ano, codfuncionario):
   return df
 
 def noc_get_year(username, password, ano = 2024, codfuncionario = 2756):
-  """Pega calendário do ano especificado"""
+  """Pega calendário do ano especificado.
+  O ano deve ser um inteiro de 4 dígitos.
+  O código do funcionário é o código do professor no sistema da insper.
+
+  Parameters
+  ----------
+  username : str
+    Username do sistema da insper.
+  password : str
+    Password do sistema da insper.
+  ano : int, optional
+    Ano do calendário, by default 2024
+  codfuncionario : int, optional
+    Código do funcionário, by default 2756
+
+  Returns
+  -------
+  pd.DataFrame
+    Dataframe com o calendário do ano especificado.
+
+  Examples
+  --------
+  >>> noc_get_year('username', 'password', 2024, 2756)
+  """
   dfs = []
   for mes in range(1, 13):
     # print message
@@ -50,5 +73,3 @@ def noc_get_year(username, password, ano = 2024, codfuncionario = 2756):
   df = pd.concat(dfs)
   return df
 
-
-# %%
